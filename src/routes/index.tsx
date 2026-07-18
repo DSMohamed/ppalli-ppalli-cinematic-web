@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import heroImg from "../assets/hero.jpg.asset.json";
-import kimchiImg from "../assets/kimchi.jpg.asset.json";
-import bulgogiImg from "../assets/bulgogi.jpg.asset.json";
-import yukgaejangImg from "../assets/yukgaejang.jpg.asset.json";
-import tofuImg from "../assets/tofu.jpg.asset.json";
-import japchaeImg from "../assets/japchae.jpg.asset.json";
-import banchanImg from "../assets/banchan.jpg.asset.json";
+import heroImg from "../assets/hero.jpg";
+import kimchiImg from "../assets/kimchi.jpg";
+import bulgogiImg from "../assets/bulgogi.jpg";
+import yukgaejangImg from "../assets/yukgaejang.jpg";
+import tofuImg from "../assets/tofu.jpg";
+import japchaeImg from "../assets/japchae.jpg";
+import banchanImg from "../assets/banchan.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -57,31 +57,31 @@ const T: { en: Copy; ar: Copy } = {
       "Every dish on this page is named in our reviews — the food regulars order by heart.",
     dishes: [
       {
-        img: kimchiImg.url,
+        img: kimchiImg,
         name: "Kimchi Jjigae",
         ko: "김치찌개",
         desc: "Aged kimchi simmered with tofu and pork until the broth turns deep, tangy, and unforgettable.",
       },
       {
-        img: bulgogiImg.url,
+        img: bulgogiImg,
         name: "Beef Bulgogi",
         ko: "불고기",
         desc: "Thin-sliced beef marinated overnight, seared hard so the edges catch and caramelize.",
       },
       {
-        img: yukgaejangImg.url,
+        img: yukgaejangImg,
         name: "Yukgaejang",
         ko: "육개장",
         desc: "The one Suraya called the best meal of the night — spicy shredded beef, brackens, scallions.",
       },
       {
-        img: tofuImg.url,
+        img: tofuImg,
         name: "Soondubu",
         ko: "순두부찌개",
         desc: "Silken tofu, red chili broth, an egg cracked in at the last second.",
       },
       {
-        img: japchaeImg.url,
+        img: japchaeImg,
         name: "Japchae Glass Noodles",
         ko: "잡채",
         desc: "Sweet potato noodles tossed glossy with sesame oil, beef, and rainbow vegetables.",
@@ -181,31 +181,31 @@ const T: { en: Copy; ar: Copy } = {
     dishesLead: "كل طبق هنا اتذكر في ريفيوهاتنا — الأكل اللي زباينا الدايمين بيطلبوه من غير قايمة.",
     dishes: [
       {
-        img: kimchiImg.url,
+        img: kimchiImg,
         name: "شوربة الكيمتشي",
         ko: "김치찌개",
         desc: "كيمتشي معتّق مطبوخ مع التوفو واللحم لحد ما الشوربة تبقى غنية وحامضة ولذيذة جدًا.",
       },
       {
-        img: bulgogiImg.url,
+        img: bulgogiImg,
         name: "بولجوجي لحم",
         ko: "불고기",
         desc: "لحم شرايح رفيعة متبّل من الليلة اللي قبلها، مشوي على نار قوية عشان الأطراف تتكرمل.",
       },
       {
-        img: yukgaejangImg.url,
+        img: yukgaejangImg,
         name: "يوكجيجانج",
         ko: "육개장",
         desc: "شوربة كورية حارة بلحم مفروم يدوي، فيها خضرة ومذاق لا يُنسى.",
       },
       {
-        img: tofuImg.url,
+        img: tofuImg,
         name: "سوندوبو",
         ko: "순두부찌개",
         desc: "توفو ناعم في شوربة فلفل حار، وبيضة بتتكسر في آخر ثانية.",
       },
       {
-        img: japchaeImg.url,
+        img: japchaeImg,
         name: "جابتشي (نودلز زجاجية)",
         ko: "잡채",
         desc: "نودلز البطاطا الحلوة بزيت السمسم، لحم، وخضار ملوّن.",
@@ -346,7 +346,7 @@ function Hero({ t, isRtl }: { t: typeof T.en; isRtl: boolean }) {
     <section id="top" className="relative isolate min-h-[100svh] overflow-hidden bg-[color:var(--color-char-black)]">
       <div className="absolute inset-0">
         <img
-          src={heroImg.url}
+          src={heroImg}
           alt="Sizzling Korean bulgogi over glowing charcoal embers"
           className="h-full w-full animate-slow-zoom object-cover opacity-70"
           width={1920}
@@ -508,7 +508,7 @@ function OwnersSection({ t }: { t: typeof T.en }) {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
         <div className="reveal relative overflow-hidden rounded-2xl">
           <img
-            src={banchanImg.url}
+            src={banchanImg}
             alt="Owners plating banchan side dishes"
             loading="lazy"
             className="aspect-[4/3] h-full w-full object-cover"
