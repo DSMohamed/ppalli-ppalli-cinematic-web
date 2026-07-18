@@ -25,7 +25,11 @@ const MAP_EMBED =
 
 type Lang = "en" | "ar";
 
-const T = {
+type Copy = {
+  dir: "ltr" | "rtl";
+  [k: string]: any;
+};
+const T: { en: Copy; ar: Copy } = {
   en: {
     dir: "ltr" as const,
     nav: { story: "The Name", dishes: "Dishes", owners: "Owners", visit: "Visit" },
