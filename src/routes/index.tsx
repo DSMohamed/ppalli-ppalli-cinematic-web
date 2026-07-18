@@ -470,7 +470,7 @@ function DishesSection({ t }: { t: typeof T.en }) {
         </div>
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {t.dishes.map((d, i) => (
+          {t.dishes.map((d: any, i: number) => (
             <article
               key={d.name}
               className={`reveal group relative overflow-hidden rounded-2xl bg-[color:var(--color-char-black)] ${
@@ -538,7 +538,7 @@ function UspSection({ t }: { t: typeof T.en }) {
           {t.uspTitle}
         </h2>
         <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-[color:var(--color-ink)]/10 sm:grid-cols-2 lg:grid-cols-3">
-          {t.usps.map((u, i) => (
+          {t.usps.map((u: any, i: number) => (
             <div
               key={u.n}
               className="reveal bg-[color:var(--color-rice-bone)] p-8 transition hover:bg-[color:var(--color-warm-white)] sm:p-10"
@@ -565,7 +565,7 @@ function Testimonials({ t, isRtl }: { t: typeof T.en; isRtl: boolean }) {
           {t.testimonialsKicker}
         </p>
         <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {t.testimonials.map((r, i) => (
+          {t.testimonials.map((r: any, i: number) => (
             <figure
               key={i}
               className="reveal rounded-2xl border border-[color:var(--color-warm-white)]/10 bg-[color:var(--color-char-black-2)] p-7"
