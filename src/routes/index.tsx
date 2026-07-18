@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import heroImg from "../assets/hero.jpg";
-import kimchiImg from "../assets/kimchi.jpg";
-import bulgogiImg from "../assets/bulgogi.jpg";
-import yukgaejangImg from "../assets/yukgaejang.jpg";
-import tofuImg from "../assets/tofu.jpg";
-import japchaeImg from "../assets/japchae.jpg";
-import banchanImg from "../assets/banchan.jpg";
+import heroImg from "../assets/BIBIMBAP.webp";
+import bibimbapImg from "../assets/BIBIMBAP.webp";
+import seafoodSoupImg from "../assets/mixed seafood soup.webp";
+import gyozaImg from "../assets/Yaki GYOZA.webp";
+import kimbapImg from "../assets/KIMBAP.webp";
+import noodlesImg from "../assets/Stir fry chicken noodles.webp";
+import sweetSourImg from "../assets/Sweet and Sour.webp";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const TALABAT_URL = "https://www.talabat.com/egypt/restaurant/613321/ppalli-ppalli";
+const TALABAT_URL = "https://www.talabat.com/egypt/restaurant/717198/ppalli-ppalli?aid=7882";
 const WHATSAPP_URL =
   "https://wa.me/201000353389?text=" +
   encodeURIComponent("Hi Ppalli Ppalli! I'd like to reserve a table.");
@@ -21,7 +21,7 @@ const PHONE = "010 0035 3389";
 const ADDRESS_EN = "5 Street 264, New Maadi (Takseem El Mesaha), Cairo";
 const ADDRESS_AR = "٥ شارع ٢٦٤، المعادي الجديدة (تقسيم المساحة)، القاهرة";
 const MAP_EMBED =
-  "https://www.google.com/maps?q=5+Street+264+New+Maadi+Cairo&output=embed";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.326214897175!2d31.27615007698098!3d29.97005362208909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458390018fcd593%3A0xe56a6991981bc654!2sPpalli%20Ppalli%20Restaurant!5e0!3m2!1sen!2sus!4v1784373927580!5m2!1sen!2sus";
 
 type Lang = "en" | "ar";
 
@@ -41,7 +41,7 @@ const T: { en: Copy; ar: Copy } = {
     heroTitle2: "It's not just our name —",
     heroTitle3: "it's how we cook.",
     heroSub:
-      "Owner-cooked Korean food that turns first-timers into regulars. Kimchi soup, bulgogi, yukgaejang — ready when you are.",
+      "Owner-cooked Korean food that turns first-timers into regulars. Bibimbap, gyoza, seafood soup — ready when you are.",
     trust1: "4.5★ from 1,600+ orders",
     trust2: "Cooked & served by the owners",
     trust3: "Maadi's go-to Korean kitchen",
@@ -55,36 +55,43 @@ const T: { en: Copy; ar: Copy } = {
     dishesTitle: "The ones people come back for.",
     dishesLead:
       "Every dish on this page is named in our reviews — the food regulars order by heart.",
+    menuCta: "View Full Menu",
     dishes: [
       {
-        img: kimchiImg,
-        name: "Kimchi Jjigae",
-        ko: "김치찌개",
-        desc: "Aged kimchi simmered with tofu and pork until the broth turns deep, tangy, and unforgettable.",
+        img: bibimbapImg,
+        name: "Bibimbap",
+        ko: "비빔밥",
+        desc: "A sizzling stone bowl with beef, vegetables, and a fried egg — mix it all together and dig in.",
       },
       {
-        img: bulgogiImg,
-        name: "Beef Bulgogi",
-        ko: "불고기",
-        desc: "Thin-sliced beef marinated overnight, seared hard so the edges catch and caramelize.",
+        img: seafoodSoupImg,
+        name: "Mixed Seafood Soup",
+        ko: "해물탕",
+        desc: "Spicy, fragrant broth loaded with fresh seafood and greens — the one Suraya called the best meal of the night.",
       },
       {
-        img: yukgaejangImg,
-        name: "Yukgaejang",
-        ko: "육개장",
-        desc: "The one Suraya called the best meal of the night — spicy shredded beef, brackens, scallions.",
+        img: gyozaImg,
+        name: "Yaki Gyoza",
+        ko: "야키교자",
+        desc: "Pan-fried dumplings with a crisp bottom and juicy filling, served with fresh slaw.",
       },
       {
-        img: tofuImg,
-        name: "Soondubu",
-        ko: "순두부찌개",
-        desc: "Silken tofu, red chili broth, an egg cracked in at the last second.",
+        img: kimbapImg,
+        name: "Kimbap",
+        ko: "김밥",
+        desc: "Korean seaweed rice rolls packed with colorful fillings — perfect for sharing or takeaway.",
       },
       {
-        img: japchaeImg,
-        name: "Japchae Glass Noodles",
-        ko: "잡채",
-        desc: "Sweet potato noodles tossed glossy with sesame oil, beef, and rainbow vegetables.",
+        img: noodlesImg,
+        name: "Stir Fry Chicken Noodles",
+        ko: "볶음면",
+        desc: "Wok-tossed noodles with chicken, peppers, and a savory spiced sauce — no shortcuts.",
+      },
+      {
+        img: sweetSourImg,
+        name: "Sweet & Sour Chicken",
+        ko: "탕수육",
+        desc: "Crispy chicken in a tangy glaze with peppers — a crowd-pleaser every time.",
       },
     ],
     ownersKicker: "Meet the owners",
@@ -137,7 +144,7 @@ const T: { en: Copy; ar: Copy } = {
         role: "Local Guide",
       },
       {
-        q: "Found it when everywhere else was full. Turned out to be the best meal of the night — especially the yukgaejang.",
+        q: "Found it when everywhere else was full. Turned out to be the best meal of the night — especially the seafood soup.",
         a: "Suraya S.",
         role: "Google review",
       },
@@ -152,7 +159,7 @@ const T: { en: Copy; ar: Copy } = {
     addressLabel: "Address",
     address: ADDRESS_EN,
     hoursLabel: "Hours",
-    hours: "11:00 AM – 10:00 PM, daily",
+    hours: "12:00 PM – 11:00 PM, daily",
     phoneLabel: "Phone / WhatsApp",
     footerNote: "Owner-run Korean kitchen. Made with 빨리빨리.",
   },
@@ -167,7 +174,7 @@ const T: { en: Copy; ar: Copy } = {
     heroTitle2: "مش بس اسمنا —",
     heroTitle3: "ده أسلوبنا في الطبخ.",
     heroSub:
-      "أكل كوري بتطبخه إيدين أصحاب المطعم بنفسهم. شوربة الكيمتشي، البولجوجي، اليوكجيجانج — جاهز لما تكون جاهز.",
+      "أكل كوري بتطبخه إيدين أصحاب المطعم بنفسهم. بيبيمباب، جيوزا، شوربة المأكولات البحرية — جاهز لما تكون جاهز.",
     trust1: "٤٫٥ نجمة من أكتر من ١٦٠٠ طلب",
     trust2: "الأصحاب هم اللي بيطبخوا ويقدّموا",
     trust3: "المطبخ الكوري المفضل في المعادي",
@@ -179,36 +186,43 @@ const T: { en: Copy; ar: Copy } = {
     dishesKicker: "أطباقنا المميزة",
     dishesTitle: "الأطباق اللي الناس بترجعلها.",
     dishesLead: "كل طبق هنا اتذكر في ريفيوهاتنا — الأكل اللي زباينا الدايمين بيطلبوه من غير قايمة.",
+    menuCta: "شوف القايمة كاملة",
     dishes: [
       {
-        img: kimchiImg,
-        name: "شوربة الكيمتشي",
-        ko: "김치찌개",
-        desc: "كيمتشي معتّق مطبوخ مع التوفو واللحم لحد ما الشوربة تبقى غنية وحامضة ولذيذة جدًا.",
+        img: bibimbapImg,
+        name: "بيبيمباب",
+        ko: "비빔밥",
+        desc: "طبق أرز في وعاء حجري ساخن مع لحم وخضار وبيضة — اخلطه كله واستمتع.",
       },
       {
-        img: bulgogiImg,
-        name: "بولجوجي لحم",
-        ko: "불고기",
-        desc: "لحم شرايح رفيعة متبّل من الليلة اللي قبلها، مشوي على نار قوية عشان الأطراف تتكرمل.",
+        img: seafoodSoupImg,
+        name: "شوربة المأكولات البحرية",
+        ko: "해물탕",
+        desc: "مرق حار وعطري مليان مأكولات بحرية طازة وخضار — اللي سُريا قالت إنها أحسن أكلة في الليلة.",
       },
       {
-        img: yukgaejangImg,
-        name: "يوكجيجانج",
-        ko: "육개장",
-        desc: "شوربة كورية حارة بلحم مفروم يدوي، فيها خضرة ومذاق لا يُنسى.",
+        img: gyozaImg,
+        name: "ياكي جيوزا",
+        ko: "야키교자",
+        desc: "زلابية مقلية بقاعدة مقرمشة وحشوة عصيرة، مع سلطة طازة.",
       },
       {
-        img: tofuImg,
-        name: "سوندوبو",
-        ko: "순두부찌개",
-        desc: "توفو ناعم في شوربة فلفل حار، وبيضة بتتكسر في آخر ثانية.",
+        img: kimbapImg,
+        name: "كيمباب",
+        ko: "김밥",
+        desc: "لفائف أرز كورية بالأعشاب البحرية وحشوات ملونة — مثالية للمشاركة أو التيك أواي.",
       },
       {
-        img: japchaeImg,
-        name: "جابتشي (نودلز زجاجية)",
-        ko: "잡채",
-        desc: "نودلز البطاطا الحلوة بزيت السمسم، لحم، وخضار ملوّن.",
+        img: noodlesImg,
+        name: "نودلز دجاج مقلي",
+        ko: "볶음면",
+        desc: "نودلز مقلي في المقلاة مع دجاج وفلفل وصلصة متبلة لذيذة.",
+      },
+      {
+        img: sweetSourImg,
+        name: "دجاج حلو وحامض",
+        ko: "탕수육",
+        desc: "دجاج مقرمش بصلصة حلوة وحامضة مع فلفل — محبوب عند الجميع.",
       },
     ],
     ownersKicker: "اتعرّف على الأصحاب",
@@ -228,7 +242,7 @@ const T: { en: Copy; ar: Copy } = {
       { q: "ما كنتش بحب الأكل الكوري قبل المكان ده. دلوقتي أنا من الزباين الدايمين.", a: "هبة م.", role: "Local Guide" },
       { q: "الأصحاب بيطبخوا ويقدّموا بنفسهم. أحسن أكل، أحسن ناس — يستاهلوا كل خير.", a: "أحمد م.س.", role: "ريفيو جوجل" },
       { q: "ساكن في نفس العمارة وبطلب باستمرار. الأكل دايمًا ممتاز.", a: "حازم ك.", role: "Local Guide" },
-      { q: "لقيته لما كل حاجة كانت مليانة. طلع أحسن أكلة في الليلة — خصوصًا اليوكجيجانج.", a: "سُريا س.", role: "ريفيو جوجل" },
+      { q: "لقيته لما كل حاجة كانت مليانة. طلع أحسن أكلة في الليلة — خصوصًا شوربة المأكولات البحرية.", a: "سُريا س.", role: "ريفيو جوجل" },
       { q: "بورشن كبير، وطعم كوري أصلي فعلًا. حبيته جدًا.", a: "علاء ك.", role: "Local Guide" },
     ],
     visitKicker: "زورونا",
@@ -347,7 +361,7 @@ function Hero({ t, isRtl }: { t: typeof T.en; isRtl: boolean }) {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Sizzling Korean bulgogi over glowing charcoal embers"
+          alt="Sizzling bibimbap in a hot stone bowl with beef, vegetables, and a fried egg"
           className="h-full w-full animate-slow-zoom object-cover opacity-70"
           width={1920}
           height={1280}
@@ -497,6 +511,20 @@ function DishesSection({ t }: { t: typeof T.en }) {
             </article>
           ))}
         </div>
+
+        <div className="reveal mt-10 text-center">
+          <a
+            href="https://drive.google.com/file/d/1EsN1fvzinrR1pm851KazNZwZP2bnEIWG/view?pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-soju-green)]/40 bg-[color:var(--color-soju-green)]/10 px-7 py-3 text-sm font-semibold text-[color:var(--color-soju-green)] transition-colors hover:bg-[color:var(--color-soju-green)]/20"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m0 0l-4-4m4 4l4-4M6 20h12" />
+            </svg>
+            {t.menuCta}
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -508,8 +536,8 @@ function OwnersSection({ t }: { t: typeof T.en }) {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
         <div className="reveal relative overflow-hidden rounded-2xl">
           <img
-            src={banchanImg}
-            alt="Owners plating banchan side dishes"
+            src={gyozaImg}
+            alt="Owners presenting freshly pan-fried yaki gyoza"
             loading="lazy"
             className="aspect-[4/3] h-full w-full object-cover"
           />
