@@ -3,11 +3,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import heroImg from "../assets/BIBIMBAP.webp";
 import bibimbapImg from "../assets/BIBIMBAP.webp";
-import seafoodSoupImg from "../assets/mixed seafood soup.webp";
-import gyozaImg from "../assets/Yaki GYOZA.webp";
+import seafoodSoupImg from "../assets/mixed-seafood-soup.webp";
+import gyozaImg from "../assets/yaki-gyoza.webp";
 import kimbapImg from "../assets/KIMBAP.webp";
-import noodlesImg from "../assets/Stir fry chicken noodles.webp";
-import sweetSourImg from "../assets/Sweet and Sour.webp";
+import noodlesImg from "../assets/stir-fry-chicken-noodles.webp";
+import sweetSourImg from "../assets/sweet-and-sour.webp";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -250,7 +250,7 @@ const T: { en: Copy; ar: Copy } = {
     addressLabel: "العنوان",
     address: ADDRESS_AR,
     hoursLabel: "المواعيد",
-    hours: "١١ ص – ١٠ م، كل يوم",
+    hours: "من الساعة 12:00 ظهرًا إلى الساعة 11:00 مساءً يوميًا",
     phoneLabel: "تليفون / واتساب",
     footerNote: "مطبخ كوري بيديره أصحابه. مصنوع بروح 빨리빨리.",
   },

@@ -42,7 +42,7 @@ export default defineConfig({
       },
       server: { entry: "server" },
     }),
-    nitro({ preset: "cloudflare-module" }),
+    nitro({ preset: "cloudflare_pages" }),
     viteReact(),
   ],
 });
